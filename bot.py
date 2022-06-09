@@ -1,25 +1,7 @@
 import discord
-from discord import *
-from random import randint
-import string
-import datetime
-import random
-import dhooks
-import contextlib
-import io
-import aiohttp
-from asyncio import create_task
-import os
-import threading
-import time
-import requests
-import asyncio
-import typing
-from time import sleep
 from discord.ext import commands
 from discord.ext.commands import Bot
 from discord.utils import get
-from os import system, name
 from discord.ext.commands import cooldown, BucketType
 from threading import Thread, Lock
 from discord.ext import commands
