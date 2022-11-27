@@ -2,25 +2,13 @@ import discord
 from discord.ext import commands
 from discord.ext.commands import Bot
 from discord.utils import get
-from discord.ext.commands import cooldown, BucketType
-from threading import Thread, Lock
-from discord.ext import commands
-from dhooks import Webhook, Embed
-from asyncio import sleep
-from discord import Intents
-from discord.ext import commands
-from discord.utils import get
-from requests import put
-import discord
-from asyncio import create_task
+
 client = commands.Bot(command_prefix='b!', Intents=Intents)
 client.remove_command('help')
-owner = 848565511834566677
+owner = 0 #Your id here
 @client.event
 async def on_ready():
   print(f'primary bot {client.user.name}#{client.user.discriminator}({client.user.id}) is ready.')
-  global startTime
-  startTime = time.time()
   await client.change_presence(activity=discord.Game(name=f"b!help | {len(client.guilds)} servers"))
 @client.command()
 @commands.cooldown(1, 30, commands.BucketType.user)
